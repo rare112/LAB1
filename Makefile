@@ -1,14 +1,14 @@
-all: sizesmain.c sizesfunc.c sizesfunc.h
-	gcc -o sizes sizesmain.c sizesfunc.c
+all: stringmain.c stringfunc.c stringfunc.h
+	gcc -o string stringmain.c stringfunc.c
 
-stepwise: sizesmain.o sizesfunc.o sizesfunc.h 
-	gcc -o sizes sizesmain.o sizesfunc.o sizesfunc.h 
+stepwise: stringmain.o stringfunc.o stringfunc.h 
+	gcc -o string stringmain.o stringfunc.o stringfunc.h 
  
-sizesmain.o: sizesmain.c 
-	gcc -c sizesmain.c 
+stringmain.o: stringmain.c 
+	gcc -c stringmain.c 
  
-sizesfunc.o: sizesfunc.c sizesfunc.h 
-	gcc -c sizesfunc.c sizesfunc.h 
+stringfunc.o: stringfunc.c stringfunc.h 
+	gcc -c stringfunc.c stringfunc.h 
  
 clean: 
 	rm -rf *.o
